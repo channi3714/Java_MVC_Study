@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
-@Repository // 스프링 컨테이너에 등록
+//@Repository // 스프링 컨테이너에 등록
 public class MemoryMemberRepository implements MemberRepository {
 
     private static Map<Long, Member> store = new HashMap<>(); //실무에서 이렇게 공유되는 변수 일때는 Concurrent HashMap 사용

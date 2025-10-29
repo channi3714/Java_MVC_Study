@@ -9,13 +9,13 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service // 스프링 컨테이너가 인식할 수 있도록 autowired랑 사용
+//@Service // 스프링 컨테이너가 인식할 수 있도록 autowired랑 사용
 public class MemberService {
 
 //    private MemberRepository memberRepository = new MemoryMemberRepository(); // 직접 생성
     private MemberRepository memberRepository;
 
-    @Autowired // MemoryMemberRepository와 연결
+//    @Autowired // MemoryMemberRepository와 연결
     public MemberService(MemberRepository memberRepository) { // 객체 구현체를 직접 생성하지 않고 외부(설정) 등에 의존-> 의존성 주입 DI(Dependency Injection)
         this.memberRepository = memberRepository;
     }
